@@ -1,0 +1,123 @@
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.top-left {
+    position: absolute;
+    left: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+    width: 100%;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.another > a{
+    font-weight: 400;
+}
+
+ul.articles{
+    list-style-type: none;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+.dashed-border{
+    border-bottom: 1px dashed black;
+}
+
+.admin-table{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.admin-table tr{
+    vertical-align: top;
+}
+
+#level{
+    position: absolute;
+}
+
+#article{
+    position: absolute;
+}
+
+.message{
+    position: absolute;
+    top: 0;
+    padding: 5px 20px;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid SlateGray;
+    color: DimGray;
+    width: auto;
+    margin:0;
+}
+
+.error{
+    background-color: IndianRed;
+    color:White;
+}
+
+.good{
+    background-color: PaleGreen;
+}
+
+.article > div.text{
+    text-indent: 3em;
+    padding: 0 50px;
+    text-align: justify;
+    font-size: 16;
+    font-weight: 600;
+}
+
+.article-bottom{
+    margin-top: 40px;
+}
+
+.article-bottom > span{
+    margin: 0 10%;
+}
