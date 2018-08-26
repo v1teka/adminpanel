@@ -205,9 +205,15 @@ class Controller extends BaseController
     }
 
     public function generateJSON(){
-        $materials = material::all()->pluck('title');;
-        $articles = Article::all('title', 'body', 'author', 'material_id', 'isInMenu');
-        $result = array("materials" => $materials, "articles" => $articles);
-        return response()->json($result, 200, [], JSON_UNESCAPED_UNICODE);
+        $materials = Material::all('id', 'title', 'parent_id', 'isInMenu', 'isArticle');
+        foreach ($materials as $index => $material)
+            if($material['isArticle']){
+                $article = Article::find($material['id']);
+                $materials[$index]['body'] = $article['body'];
+                $materials[$index]['author'] = $article['author'];
+                $materials[$index]['created_at'] = $article['created_at'];
+                $materials[$index]['updated_at'] = $article['updated_at'];
+            }
+        return response()->json($materials, 200, [], JSON_UNESCAPED_UNICODE);
     }
 }
